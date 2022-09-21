@@ -1,0 +1,20 @@
+footer {
+    margin-top: auto;
+    background-color: #000;
+  }
+  
+  .footer__content {
+    height: 8rem;
+    display: grid;
+    place-items: center;
+  }
+  
+  .footer__copyright {
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .footer__copyright span {
+    color: #2ead2e;
+  }
