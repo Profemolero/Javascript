@@ -1,0 +1,80 @@
+body{
+  background: rgb(0,0,0);
+background: linear-gradient(56deg, rgba(0,0,0,1) 0%, rgba(4,71,5,1) 66%, rgba(33,255,0,1) 100%);
+}
+
+.hero img{
+    background-size: cover;
+
+    width: 80vw;
+    height: 100%;
+}
+
+.acordeon {
+    width: 800px;
+    margin: 90px auto;
+    color: black;
+    background-color: white;
+    padding: 45px 45px;
+    border-radius: 15px;
+  }
+  
+  .acordeon .contenedor {
+      position: relative;
+      margin: 10px 10px;
+    }
+    
+    /* Posiciona las etiquetas en relación con el contenedor. Añade relleno en la parte superior e inferior y aumenta el tamaño de la fuente. También hace que su cursor sea un puntero */
+    
+    .acordeon .etiqueta {
+      position: relative;
+      padding: 10px 0;
+      font-size: 30px;
+      color: black;
+      cursor: pointer;
+    }
+  
+    /* Posiciona el signo más a 5px de la derecha. Lo centra utilizando la propiedad transform. */
+  
+  .acordeon .etiqueta::before {
+      content: '+';
+      color: black;
+      position: absolute;
+      top: 50%;
+      right: -5px;
+      font-size: 30px;
+      transform: translateY(-50%);
+    }
+    
+    /* Oculta el contenido (altura: 0), disminuye el tamaño de la fuente, justifica el texto y añade la transición */
+    
+    .acordeon .contenido {
+      position: relative;
+      background: white;
+      height: 0;
+      font-size: 20px;
+      text-align: justify;
+      width: 100%;
+      overflow: hidden;
+      transition: 0.5s;
+    }
+    
+    /* Añade una línea horizontal entre los contenidos */
+    
+    .acordeon hr {
+      width: 100;
+      margin-left: 0;
+      border: 1px solid grey;
+    }
+  
+    .acordeon .contenedor.activa .contenido {
+      height: 150px;
+    }
+    
+    /* Cambia de signo positivo a negativo una vez activado */
+    
+    .acordeon .contenedor.activa .etiqueta::before {
+      content: '-';
+      font-size: 30px;
+    }
+    
